@@ -36,6 +36,8 @@ android {
 }
 
 dependencies {
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.squareup.moshi:moshi:1.14.0'
     kapt 'com.squareup.moshi:moshi-kotlin-codegen:1.14.0'
 }
