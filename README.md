@@ -18,7 +18,7 @@ allprojects {
 Or if using settings.gradle:
 ```groovy  
 dependencyResolutionManagement {  
-// other code
+ // other code
  repositories { 
   // other code 
   maven { url 'https://jitpack.io' } 
