@@ -18,9 +18,12 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
+
+/**
+ * @param context for access json assets file
+ * */
 class NIKParserImpl(
-    private val context: Context,
-    private val isDataReadyToAction: (Boolean) -> Unit,
+    private val context: Context
 ) : NIKParser {
 
     private var provinceList: List<NIKProvince> = emptyList()
@@ -50,7 +53,6 @@ class NIKParserImpl(
 
     init {
         coroutineScope.launch {
-            isDataReadyToAction(false)
             parseJsonData()
         }
     }
@@ -292,8 +294,6 @@ class NIKParserImpl(
                 val zipCode = it.value.split(" -- ")[1].replace("-", "")
                 NIKDistrict(it.key, name, zipCode)
             }
-
-            isDataReadyToAction(true)
         }
     }
 
