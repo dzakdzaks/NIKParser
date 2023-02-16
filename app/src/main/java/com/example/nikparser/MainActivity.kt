@@ -28,7 +28,6 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.dzakdzaks.nikparser.NIKParser
 import com.dzakdzaks.nikparser.NIKParserImpl
 import com.dzakdzaks.nikparser.model.NIKParserResponse
 import com.example.nikparser.ui.theme.NIKParserTheme
@@ -79,7 +78,7 @@ fun MyContent(paddingValues: PaddingValues) {
 
     var result by remember { mutableStateOf("") }
 
-    val nikParser: NIKParser = NIKParserImpl(context)
+    val nikParser = NIKParserImpl(context)
 
     val nikParserAdapter by lazy {
         Moshi.Builder().build().adapter(NIKParserResponse::class.java)
