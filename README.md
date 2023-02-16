@@ -2,11 +2,13 @@
 NIK offline validator
 
 # How To Use
-```json
+```kotlin
 val nikParser: NIKParser = NIKParserImpl(context)
-val nikParseResult = nikParser.parseNik(it.annotatedString.text)
+val nikParseResult = nikParser.parseNik(string)
+```
 
-// nikParseResult result
+# parseNik(string) Result
+```json
 {
   "nik": "3276055708900002",
   "isValid": true,
