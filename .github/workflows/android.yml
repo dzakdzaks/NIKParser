@@ -62,6 +62,9 @@ jobs: # groups the jobs to be executed in this workflow
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
       - name: Execute unit tests
         run: ./gradlew test --stacktrace # Execute gradle script to execute unit tests
 
@@ -88,6 +91,8 @@ jobs: # groups the jobs to be executed in this workflow
         with:
           java-version: '11'
 
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
       - name: Build debug apk
         run: ./gradlew assembleDebug --stacktrace
 
