@@ -1,4 +1,4 @@
-package com.example.nikparser
+package com.dzakdzaks.nikparserapp
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

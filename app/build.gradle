@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.nikparser'
+    namespace 'com.dzakdzaks.nikparser'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.nikparser"
+        applicationId "com.dzakdzaks.nikparserapp"
         minSdk 21
         targetSdk 33
         versionCode 1
@@ -19,12 +19,27 @@ android {
         vectorDrawables {
             useSupportLibrary true
         }
+        multiDexEnabled true
+    }
+
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file("local.properties").newDataInputStream())
+
+    signingConfigs {
+        release {
+            storeFile file(properties.getProperty("KEYSTORE_FILE").toString())
+            storePassword properties.getProperty("KEYSTORE_PASSWORD").toString()
+            keyAlias properties.getProperty("SIGNING_KEY_ALIAS").toString()
+            keyPassword properties.getProperty("SIGNING_KEY_PASSWORD").toString()
+        }
     }
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
     compileOptions {

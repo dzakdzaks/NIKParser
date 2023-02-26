@@ -1,4 +1,4 @@
-package com.example.nikparser.ui.theme
+package com.dzakdzaks.nikparserapp.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

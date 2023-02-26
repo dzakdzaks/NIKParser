@@ -1,4 +1,4 @@
-package com.example.nikparser
+package com.dzakdzaks.nikparserapp
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -30,7 +30,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.dzakdzaks.nikparser.NIKParserImpl
 import com.dzakdzaks.nikparser.model.NIKParserResponse
-import com.example.nikparser.ui.theme.NIKParserTheme
+import com.dzakdzaks.nikparserapp.ui.theme.NIKParserTheme
 import com.squareup.moshi.Moshi
 
 class MainActivity : ComponentActivity() {

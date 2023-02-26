@@ -1,4 +1,4 @@
-package com.example.nikparser
+package com.dzakdzaks.nikparserapp
 
 import org.junit.Test
 
