@@ -1,6 +1,10 @@
 name: Android Publish
 
 on:
+  push:
+    branches:
+      - 'release_*'
+      - 'main'
   workflow_dispatch:
 
 jobs:
