@@ -7,7 +7,7 @@ plugins {
 def properties = loadLocalProperties()
 
 android {
-    namespace 'com.dzakdzaks.nikparser'
+    namespace 'com.dzakdzaks.nikparserapp'
     compileSdk 33
 
     defaultConfig {
