@@ -153,7 +153,8 @@ jobs: # groups the jobs to be executed in this workflow
 
   send-message:
     name: 📢 Send Message
-    needs: [ create-release, firebase-deploy, playstore-deploy ]
+#    needs: [ create-release, firebase-deploy, playstore-deploy ]
+    needs: [ create-release, playstore-deploy ]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
