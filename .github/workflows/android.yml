@@ -41,6 +41,9 @@ jobs: # groups the jobs to be executed in this workflow
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
       - name: Lint check
         run: ./gradlew lint # Execute gradle script to perform lint check
 
