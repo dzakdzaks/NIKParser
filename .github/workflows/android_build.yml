@@ -47,11 +47,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-caches-
       - name: Make Gradlew Executable
-        run: cd android && chmod +x ./gradlew
+        run: chmod +x ./gradlew
 
         # Building and signing App
       - name: Build Android App Bundle
-          run: cd android && ./gradlew bundleRelease
+          run: ./gradlew bundleRelease
 
       - name: Sign ABB
           uses: r0adkll/sign-android-release@v1
