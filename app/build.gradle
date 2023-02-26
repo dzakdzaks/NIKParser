@@ -22,15 +22,12 @@ android {
         multiDexEnabled true
     }
 
-    Properties properties = new Properties()
-    properties.load(project.rootProject.file("local.properties").newDataInputStream())
-
     signingConfigs {
         release {
-            storeFile file(properties.getProperty("KEYSTORE_FILE").toString())
-            storePassword properties.getProperty("KEYSTORE_PASSWORD").toString()
-            keyAlias properties.getProperty("SIGNING_KEY_ALIAS").toString()
-            keyPassword properties.getProperty("SIGNING_KEY_PASSWORD").toString()
+            storeFile file("D\\:\\\\Programming\\\\jetpack_compose\\\\keystore\\\\upload-keystore.jks")
+            storePassword "nikparser"
+            keyAlias "upload"
+            keyPassword "nikparser"
         }
     }
 
