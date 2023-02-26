@@ -26,6 +26,9 @@ jobs: # groups the jobs to be executed in this workflow
       # - name: Make gradle executable
       #  run: chmod +x ./gradlew
 
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
       # Execute gradle build command with stacktrace flag
       - name: Build with gradle
         run: ./gradlew build --stacktrace # Execute gradle script to build project
